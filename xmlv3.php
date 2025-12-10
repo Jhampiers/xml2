@@ -17,7 +17,7 @@ $consulta = "SELECT * FROM sigi_programa_estudios";
 $resultado = $conexion->query($consulta);
 
 while ($pe = mysqli_fetch_assoc($resultado)) {
-   echo $pe['nombre']. "<br>";
+   
     $num_pe = $xml->createElement('pe_'. $pe['id']);
     $cod_pe = $xml->createElement('codigo', $pe['codigo']);
     $num_pe->appendChild($cod_pe);
